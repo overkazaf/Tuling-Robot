@@ -2,7 +2,12 @@
 <resources>
 
     <string name="app_name">TurlingRobot</string>
+    <string name="btn_send">发送</string>
+    <string name="title">Title</string>
+    <string name="msg">Msg</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="input">请输入</string>
 
 </resources>

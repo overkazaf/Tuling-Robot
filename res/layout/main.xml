@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout 
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:paddingBottom="48sp"
+       >
+       <ListView  
+        android:id="@+id/msgListView"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content" > 
+       </ListView>
+   </LinearLayout>
+   
+   <LinearLayout
+        android:orientation="horizontal" 
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:background="#e8e8e8"
+        android:layout_alignParentBottom="true"
+       >
+       <EditText
+           android:layout_height="fill_parent"
+           android:layout_weight="3"
+           android:hint="@string/input"
+           />
+       <Button
+           android:layout_height="fill_parent"
+           android:layout_weight="1"
+           android:background="#0099ff"
+           android:textColor="#ffffff"
+           android:text="@string/btn_send"
+           ></Button>
+   </LinearLayout>
+</RelativeLayout>
