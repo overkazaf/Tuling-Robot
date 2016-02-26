@@ -9,7 +9,7 @@
 *  提供事件的闹钟设置功能
 
 ##Data Model
-See `` tolingrobot-readme.md ``
+See `` tulingrobot-readme.md ``
 
 #Evaluation
 1. ui 1 week
