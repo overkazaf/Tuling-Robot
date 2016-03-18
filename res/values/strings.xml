@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TurlingRobot</string>
-    <string name="btn_send">发送</string>
-    <string name="title">Title</string>
-    <string name="msg">Msg</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="app_name">TulingRobot</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="input">请输入</string>
+    <string name="status">聊天中...</string>
+    <string name="input">和机器人聊天吧!</string>
+    <string name="btn_send">发送</string>
+    <string name="BTN_OK">确定</string>
+    <string name="BTN_CANCEL">取消</string>
+    <string name="history">聊天记录</string>
+    <string name="events">闹钟事件</string>
+    <string name="back">&lt;-</string>
+    <string name="search">GO</string>
 
 </resources>
