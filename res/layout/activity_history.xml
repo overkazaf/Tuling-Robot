@@ -3,19 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tuling.robot.activities.History" >
+    tools:context="com.tuling.robot.activities.HistoryActivity" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="0sp"
+        android:layout_height="24sp"
         android:layout_weight="1" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal" >
 
             <Button
+                android:id="@+id/btn_back"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -24,11 +26,14 @@
             </Button>
 
             <EditText
+                android:id="@+id/etHistory"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="4" >
+                android:layout_weight="4" 
+                android:hint="@string/history_hint">
             </EditText>
             <Button
+                android:id="@+id/btn_search"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -42,7 +47,8 @@
         android:layout_width="fill_parent"
         android:layout_height="0sp"
         android:layout_weight="8"
-        android:background="#cccccc" >
+        android:padding="5sp"
+        >
         <ListView
             android:id="@+id/historyListView"
             android:layout_width="wrap_content"

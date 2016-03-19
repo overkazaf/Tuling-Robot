@@ -4,5 +4,5 @@
     android:layout_height="match_parent"
 	android:orientation="vertical"
 	android:id="@+id/clockLayout"
-    tools:context="com.tuling.robot.activities.MainActivity" >
+    tools:context="com.tuling.robot.activities.ClockActivity" >
 </LinearLayout>

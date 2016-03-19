@@ -50,6 +50,12 @@
         <activity
             android:name=".activities.ClockActivity">
         </activity>
+        <activity
+            android:name=".activities.HistoryActivity">
+        </activity>
+        <activity
+            android:name=".activities.EventsActivity">
+        </activity>
     </application>
 
 </manifest>

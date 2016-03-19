@@ -8,14 +8,14 @@
 	<RelativeLayout 
 	    android:id="@+id/toolbar"
 	    android:layout_width="match_parent"
-	    android:layout_height="0sp"
+	    android:layout_height="24sp"
 	    android:layout_weight="1"
 	    android:padding="5sp"
 	    android:orientation="horizontal"
 	    android:layout_gravity="center_vertical"
 	    >
 	    <Button
-	        android:id="@+id/events"
+	        android:id="@+id/btn_events"
 	        android:text="@string/events"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:text="@string/status" />
 	    
 	    <Button
-	        android:id="@+id/history"
+	        android:id="@+id/btn_history"
 	        android:text="@string/history"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0sp"
+        android:layout_height="24sp"
         android:id="@+id/bottomLayout"
         android:layout_alignBottom="@+id/mainLayout"
         android:layout_weight="1"
