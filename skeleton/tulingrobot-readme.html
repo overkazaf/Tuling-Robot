@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Tulingrobot-readme.md</title>
+
+</head>
+<body>
+<h1>Tulingrobot-readme.md</h1>
+
+<h3>DataBase     数据库， SQLite</h3>
+
+<pre><code>+ history    -- 记录聊天内容
++ events     -- 记录闹铃事件
+</code></pre>
+
+<h3>TulingSDK    图灵API调用</h3>
+
+<pre><code>+ Chatting        聊天
++ Weather         天气
++ News            新闻
++ Express         快递
++ Flight          航班
+</code></pre>
+
+<h3>Native Android    原生安卓系统调用</h3>
+
+<pre><code>+ Alarm           设置闹铃
+</code></pre>
+
+<hr />
+
+<pre><code>* Diag            拨号  
+* Mail            邮箱相关， 可与MailClient搭配， See https://github.com/overkazaf/MailClient
+</code></pre>
+
+<h2>Tables/DataModels        数据模型，数据库表定义, 用于辅助功能扩展</h2>
+
+<p><code>history </code></p>
+
+<table>
+<thead>
+<tr>
+<th> 字段           </th>
+<th align="center"> 类型          </th>
+<th> 描述   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> _id           </td>
+<td align="center">  INTEGER      </td>
+<td>  自增主键  </td>
+</tr>
+<tr>
+<td> type          </td>
+<td align="center">  INTEGER      </td>
+<td>  0为问，1为答  </td>
+</tr>
+<tr>
+<td> msg_type      </td>
+<td align="center">  INTEGER      </td>
+<td>  1文本， 2为链接，3为新闻等  </td>
+</tr>
+<tr>
+<td> content       </td>
+<td align="center">  TEXT         </td>
+<td>  历史消息内容  </td>
+</tr>
+<tr>
+<td> date          </td>
+<td align="center">  TEXT         </td>
+<td>  yyyy-MM-dd hh:mm:ss   </td>
+</tr>
+</tbody>
+</table>
+
+
+<p><code>events </code></p>
+
+<table>
+<thead>
+<tr>
+<th> 字段           </th>
+<th align="center"> 类型          </th>
+<th> 描述   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> id            </td>
+<td align="center">  INTEGER      </td>
+<td>  自增  </td>
+</tr>
+<tr>
+<td> info          </td>
+<td align="center">  TEXT         </td>
+<td>  事件描述  </td>
+</tr>
+<tr>
+<td> register_date </td>
+<td align="center">  TEXT         </td>
+<td>  事件设置时间  </td>
+</tr>
+<tr>
+<td> warn_date     </td>
+<td align="center">  TEXT         </td>
+<td>  事件提醒   </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>View              视图</h2>
+
+<pre><code>MainActivity         聊天的交互界面
+</code></pre>
+
+<hr />
+
+<pre><code>HistoryActivity      聊天历史查询界面
+EventsActivity       事件历史查询界面
+</code></pre>
+
+<h2>Controller        控制器，用于控制模型与视图间的交互</h2>
+
+<ul>
+<li><p>TuringApiManager  -- 图灵全局控制器， 用于控制整个聊天应用， 分发子任务</p>
+
+<ul>
+<li>getHistoryInstance     获取历史实例</li>
+<li>getEventsInstance      获取事件实例</li>
+<li>getRobotViewInstance   获取聊天视图实例</li>
+</ul>
+</li>
+<li><p>MainActivity -- 主视图类</p>
+
+<ul>
+<li>initApplication   初始化主程序</li>
+<li>initClickEvents   初始化点击事件</li>
+<li>initTuling        初始化聊天机器人实例</li>
+<li>initListView      读取聊天信息列表</li>
+<li>checkNetworkState 检查网络状态是否可用</li>
+<li>getNetworkType    获取当前的网络类型</li>
+<li>doRequest         发出聊天请求，由绑定的MyHttpRequestWatcher实例监听返回的结果</li>
+<li>appendQuestion    添加问题到视图</li>
+<li>appendAnswer      添加回答到视图</li>
+<li>updateHistory     更新聊天历史，写数据库</li>
+<li>updateEvents      更新事件历史，写数据库</li>
+<li>displayAlarm      显示闹铃设置界面</li>
+<li>isAvailableCommand  判断输入的命令是否可用，命令关键字可自定义，目前只开发了闹钟的设置功能。  （命令关键字："alarm", "提醒", "闹钟", "闹铃", "备忘"）</li>
+</ul>
+</li>
+<li><p>HistoryActivity --  聊天历史类， 用于进行聊天历史相关的增删改查操作</p>
+
+<ul>
+<li>initActivity     初始化聊天历史界面</li>
+<li>initClickEvents  初始化按钮点击事件</li>
+<li>add              新增聊天信息</li>
+<li>del              删除聊天信息</li>
+<li>mod              修改聊天信息</li>
+<li>find             查询聊天信息</li>
+</ul>
+</li>
+<li><p>EventsActivity  --  事件类， 用于进行Android原生事件的调用，以及事件的记录等</p>
+
+<ul>
+<li>initActivity    初始化提醒事件历史界面</li>
+<li>initClickEvents 初始化按钮点击事件</li>
+<li>add             新增事件</li>
+<li>del             删除事件</li>
+<li>mod             修改事件</li>
+<li>find            查询事件</li>
+<li>call            调用</li>
+</ul>
+</li>
+<li><p>ClockActivity  -- 闹钟提醒的视图</p>
+
+<ul>
+<li>onCreate    初始化时直接显示设置的提醒事件</li>
+</ul>
+</li>
+<li><p>DBConfig -- 数据库配置类</p>
+
+<ul>
+<li><p>dbName            数据库名称</p></li>
+<li><p>historyTableName  聊天历史数据库表名</p></li>
+<li><p>eventsTableName   提醒事件数据库表名</p></li>
+<li><p>version           数据库版本号</p></li>
+</ul>
+</li>
+<li><p>DBOpenHelper  -- 本地SQLite数据库的助理类</p></li>
+</ul>
+
+
+<h2>Decorator         装饰器，用于处理Tuling SDK返回的信息</h2>
+
+<p><code>由于图灵API在新闻和航班的查询结果中， 默认只返回一个list或url， 这里可以加工一些， 取前几条相关新闻返回到View中</code></p>
+
+<p>MyBasePublicElement -- 基类的公共元素类， 在com.tuling.robot.listeners内的几个类会继承于此类， 共用</p>
+
+<ul>
+<li><p>mMyHandler -- 全局控制器， 用于处理API请求成功的回调</p>
+
+<ul>
+<li><p>constructUrl  构造链接类消息</p></li>
+<li><p>constructText 构造文本类信息</p></li>
+<li><p>constructNews 构造新闻类消息</p></li>
+</ul>
+</li>
+<li><p>mTuringApiManager  --  图灵API管理器</p>
+
+<ul>
+<li><p>requestTuringAPI   根据提问信息，封装成合法的API请求， 由图灵的SDK提供</p></li>
+<li><p>setRequestWatcher  绑定请求的监听器</p></li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

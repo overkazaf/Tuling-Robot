@@ -22,6 +22,7 @@
     
 ##Tables/DataModels        数据模型，数据库表定义, 用于辅助功能扩展
 `` history  ``
+
 | 字段           | 类型          | 描述   |
 | ------------- |:-------------:| -----|
 | _id			|  INTEGER      |  自增主键  |
@@ -29,6 +30,8 @@
 | msg_type		|  INTEGER      |  1文本， 2为链接，3为新闻等  |
 | content	    |  TEXT         |  历史消息内容  |
 | date          |  TEXT         |  yyyy-MM-dd hh:mm:ss   |
+
+
 
 `` events  ``
 
@@ -101,8 +104,9 @@
 
 ##Decorator         装饰器，用于处理Tuling SDK返回的信息
 `由于图灵API在新闻和航班的查询结果中， 默认只返回一个list或url， 这里可以加工一些， 取前几条相关新闻返回到View中`
-*  MyBasePublicElement -- 基类的公共元素类， 在com.tuling.robot.listeners内的几个类会继承于此类， 共用
-  +  mMyHandler -- 全局控制器， 用于处理API请求成功的回调
+
+MyBasePublicElement -- 基类的公共元素类， 在com.tuling.robot.listeners内的几个类会继承于此类， 共用
+ +  mMyHandler -- 全局控制器， 用于处理API请求成功的回调
     - constructUrl  构造链接类消息
     - constructText 构造文本类信息
     - constructNews 构造新闻类消息
